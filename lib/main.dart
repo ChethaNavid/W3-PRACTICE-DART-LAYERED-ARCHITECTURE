@@ -1,24 +1,13 @@
- 
-import 'domain/quiz.dart';
+import 'package:my_first_project/data/quizRepository.dart';
 import 'ui/quiz_console.dart';
 
 void main() {
-
-  List<Question> questions = [
-    Question(
-        title: "Capital of France?",
-        choices: ["Paris", "London", "Rome"],
-        goodChoice: "Paris",
-        points: 10),
-    Question(
-        title: "2 + 2 = ?", 
-        choices: ["2", "4", "5"], 
-        goodChoice: "4",
-        points: 5),
-  ];
-
-  Quiz quiz = Quiz(questions: questions);
-  QuizConsole console = QuizConsole(quiz: quiz);
-
+  final repo = QuizRepository(
+    quizFilePath: 'lib/data/quiz.json',
+    resultFilePath: 'lib/data/result.json',
+  );
+  
+  final quiz = repo.readQuiz();
+  QuizConsole console = QuizConsole(quiz: quiz, repo: repo);
   console.startQuiz();
 }

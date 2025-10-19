@@ -6,7 +6,9 @@
     {
       "name": "my_first_project",
       "version": "0.0.0",
-      "dependencies": [],
+      "dependencies": [
+        "uuid"
+      ],
       "devDependencies": [
         "test"
       ]
@@ -41,6 +43,16 @@
         "web_socket_channel",
         "webkit_inspection_protocol",
         "yaml"
+      ]
+    },
+    {
+      "name": "uuid",
+      "version": "4.5.1",
+      "dependencies": [
+        "crypto",
+        "fixnum",
+        "meta",
+        "sprintf"
       ]
     },
     {
@@ -297,6 +309,28 @@
       ]
     },
     {
+      "name": "fixnum",
+      "version": "1.1.1",
+      "dependencies": []
+    },
+    {
+      "name": "meta",
+      "version": "1.17.0",
+      "dependencies": []
+    },
+    {
+      "name": "sprintf",
+      "version": "7.0.0",
+      "dependencies": []
+    },
+    {
+      "name": "crypto",
+      "version": "3.0.6",
+      "dependencies": [
+        "typed_data"
+      ]
+    },
+    {
       "name": "string_scanner",
       "version": "1.4.1",
       "dependencies": [
@@ -321,13 +355,6 @@
       "dependencies": []
     },
     {
-      "name": "crypto",
-      "version": "3.0.6",
-      "dependencies": [
-        "typed_data"
-      ]
-    },
-    {
       "name": "vm_service",
       "version": "15.0.2",
       "dependencies": []
@@ -347,11 +374,6 @@
         "source_maps",
         "stack_trace"
       ]
-    },
-    {
-      "name": "meta",
-      "version": "1.17.0",
-      "dependencies": []
     },
     {
       "name": "glob",
